@@ -98,3 +98,23 @@ footer {
 	padding: 1.5rem;
 	margin-top: 2rem;
 }
+
+/* Логотип в шапке */
+.logo {
+	height: 80px;
+	margin-bottom: 1rem;
+}
+
+/* Баннер */
+.banner img {
+	width: 100%;
+	max-height: 300px;
+	object-fit: cover;
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 600px) {
+	.logo {
+		height: 60px;
+	}
+}
