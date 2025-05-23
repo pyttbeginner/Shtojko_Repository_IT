@@ -5,6 +5,7 @@ body {
 	padding: 0;
 	line-height: 1.6;
 	color: #333;
+	background-color: #f9f9f9;
 }
 
 /* Шапка сайта */
@@ -46,6 +47,11 @@ header p {
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	border: 2px solid white;
+	transition: transform 0.3s;
+}
+
+.school-photo:hover {
+	transform: scale(1.03);
 }
 
 /* Навигация */
@@ -68,11 +74,13 @@ nav ul li a {
 	color: white;
 	text-decoration: none;
 	font-weight: bold;
-	transition: opacity 0.3s;
+	padding: 0.5rem 1rem;
+	border-radius: 4px;
+	transition: background-color 0.3s;
 }
 
 nav ul li a:hover {
-	opacity: 0.8;
+	background-color: #0d47a1;
 }
 
 /* Основное содержимое */
@@ -81,42 +89,47 @@ main {
 	max-width: 1000px;
 	margin: 0 auto;
 }
-/* Все стили остаются прежними */
-.school-photo {
-	width: 250px;
-	height: 180px;
-	object-fit: cover;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	border: 2px solid white;
-}
-
-/* Остальные стили как в предыдущем варианте */
 
 h2 {
 	color: #0d47a1;
 	border-bottom: 2px solid #e3f2fd;
 	padding-bottom: 0.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	color: #1565c0;
+	margin-top: 1.2rem;
 }
 
 .info-block {
-	background-color: #f5f5f5;
+	background-color: white;
 	border-left: 4px solid #1e88e5;
-	padding: 1rem;
+	padding: 1.5rem;
 	margin: 1.5rem 0;
+	border-radius: 0 8px 8px 0;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.department {
+	background-color: #e3f2fd;
+	padding: 1rem;
+	border-radius: 4px;
+	margin: 1rem 0;
 }
 
 .contact-info {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	gap: 1rem;
+	gap: 1.5rem;
 	margin: 2rem 0;
 }
 
 .contact-item {
-	background-color: #e3f2fd;
-	padding: 1rem;
-	border-radius: 4px;
+	background-color: white;
+	padding: 1.5rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Подвал */
@@ -139,10 +152,24 @@ footer {
 		width: 100%;
 		max-width: 350px;
 	}
+
+	nav ul {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
 }
 
 @media (max-width: 480px) {
 	.school-photo {
 		height: 150px;
+	}
+
+	header h1 {
+		font-size: 1.3rem;
+	}
+
+	header h2 {
+		font-size: 1.1rem;
 	}
 }
